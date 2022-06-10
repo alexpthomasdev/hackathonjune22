@@ -1,0 +1,23 @@
+.kudosMessage {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .given {
+    text-decoration: underline;
+  }
+}

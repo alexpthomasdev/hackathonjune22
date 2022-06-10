@@ -1,0 +1,41 @@
+.managePage {
+  margin: 20px;
+
+  .tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    row-gap: 40px;
+
+    .tipsContainer {
+      border: 1px solid #c4c4c4;
+      border-radius: 10px;
+      width: 100%;
+      .tipsHeader {
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        display: block;
+        font-weight: bold;
+        &.low {
+          background-color: rgb(243, 110, 110);
+        }
+        &.high {
+          background-color: rgb(136, 248, 102);
+        }
+      }
+      ul {
+        padding: 20px 20px 20px 40px;
+
+        .selected {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

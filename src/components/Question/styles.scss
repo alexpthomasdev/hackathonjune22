@@ -1,0 +1,128 @@
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  .question {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .answers {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 10px;
+
+    .answerBox {
+      border: 2px solid transparent;
+      padding: 1rem;
+      font-size: 1.5em;
+      width: 15%;
+      text-align: center;
+      cursor: pointer;
+      span {
+        display: block;
+        font-size: 0.5em;
+        margin-top: 5px;
+      }
+      &.selected,
+      &:hover {
+        border: 2px solid #000;
+      }
+      &.box-1 {
+        background-color: #f27882;
+      }
+      &.box-2 {
+        background-color: #f8ac21;
+      }
+      &.box-3 {
+        background-color: #fbcc08;
+      }
+      &.box-4 {
+        background-color: #8bd1d2;
+      }
+      &.box-5 {
+        background-color: #7acb9d;
+      }
+    }
+  }
+
+  .commentsSection {
+    transition: all 0.5s;
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+
+    &.open {
+      height: 100%;
+    }
+
+    .title {
+      text-align: left;
+      border: 1px solid #c4c4c4;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        padding: 10px;
+      }
+      .subtitle {
+        display: block;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+      }
+      button {
+        border: none;
+        background-color: #2b4466;
+        color: white;
+        height: 100%;
+        align-self: stretch;
+        padding: 13px;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: #2b4466;
+        }
+      }
+    }
+    .commentsContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid #c4c4c4;
+      border-top: none;
+      .comments {
+        flex-grow: 1;
+        border-right: 2px solid #c4c4c4;
+
+        textarea {
+          width: 90%;
+          min-height: 50px;
+          border: none;
+          margin: 10px;
+        }
+      }
+
+      .visibility {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+  }
+}
