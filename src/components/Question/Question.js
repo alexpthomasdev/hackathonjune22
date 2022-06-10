@@ -5,15 +5,12 @@ const Question = ({ questionId, questionText, showKudosPopup, handleSendKudosPre
 
   const [value, setValue] = useState(null)
   const [commentValue, setCommentValue] = useState("")
-  const [_, setVisibleTo] = useState('all')
+
 
   const onAnswerSelected = (id) => {
     setValue(value !== id ? id : null)
   }
 
-  const handleRadioChange = (e) => {
-    setVisibleTo(e.target.value)
-  }
 
   return <div className='questionContainer'>
     <div className='question'>
@@ -54,11 +51,11 @@ const Question = ({ questionId, questionText, showKudosPopup, handleSendKudosPre
         <div className='visibility'>
           <label>Visible to:</label>
           <div>
-            <input type="radio" id={`manager-${questionId}`} name={`visibility-${questionId}`} value="manager" onChange={handleRadioChange} />
+            <input type="radio" id={`manager-${questionId}`} name={`visibility-${questionId}`} value="manager" />
             <label htmlFor={`manager-${questionId}`}>Manager</label>
           </div>
           <div>
-            <input type="radio" id={`all-${questionId}`} name={`visibility-${questionId}`} value="all" defaultChecked onChange={handleRadioChange} />
+            <input type="radio" id={`all-${questionId}`} name={`visibility-${questionId}`} value="all" defaultChecked />
             <label htmlFor={`all-${questionId}`}>All</label>
           </div>
         </div>
